@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>Netcade</title>
+        <script src="../script.js"></script>
+        <link rel="stylesheet" href="../styles.css">
+        <link id="favicon" rel="icon" href="">
+
+    </head>
+
+    <body>
+
+        <!-- TOP NAVBAR AND SETTINGS -->
+        <div id="nav" style="background-color: #080808;">
+            <h1 style="color: white; font-size: 50px; text-align: center; margin-bottom: -20px;"><a href="../index.html">Netcade</a></h1>
+            <ul style="list-style-type: none; text-align: center; position: relative; left: -19px;">
+                <li class="navitem" style="background-color: #000000;"><a href="../games.html">Games</a></li>
+                <li class="navitem"><a href="../tools.html">Tools</a></li>
+                <li class="navitem"><a href="../bookmarklets.html">Bookmarklets</a></li>
+                <li class="navitem"><a href="https://www.github.com/wintrcat">GitHub</a></li>
+            </ul>
+
+            <a href="javascript:settingsMenu();"><img src="../assets/settings.png" width=28 height=28 style="position: absolute; right: 14px; top: 20px; filter: invert(100%);"></a>
+        </div>
+
+        <div class="settings" style="visibility: hidden; list-style-type: none; position: absolute; right: 14px; top: 55px; height: 100px; width: 225px; background-color: #161616; border: 2px solid rgb(32, 32, 32);">
+
+            <span style="display: block;">Tab Cloak</span>
+            <input id="titlecloak" type="text" placeholder="Tab Title..." style="border: 2px solid black;"> 
+            <button onclick="cloakTitle();">Apply</button><br>
+
+            <table style="border: 2px solid black; background-color: #2d2d2d; width: 109px; position: relative; top: 10px;">
+                <tr>
+                    <td>
+                        <a href="javascript:cloakIcon(1);"><img src="../assets/googleicon.ico" width=24 height=24 style="position: relative; top: -19px; left: -30px;"></a>
+                    </td>
+                    <td>
+                        <a href="javascript:cloakIcon(2);"><img src="../assets/googledriveicon.png" width=24 height=24 style="position: relative; top: -19px; left: -30px;"></a>
+                    </td>
+                    <td>
+                        <a href="javascript:cloakIcon(3);"><img src="../assets/googleclassroomicon.png" width=27.852 height=24 style="position: relative; top: -19px; left: -30px;"></a>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+        <button class="panicbtn" onclick="panic();"><span style="color: white; position: relative; bottom: 1px;">Panic</span></button>
+
+        <!-- OTHER -->
+
+        <div style="text-align: center;">
+            <span style="font-size: 30px;">Vex 3</span><br><br>
+            <iframe src="https://rawcdn.githack.com/scheng123321/tmm-html5-cdn1/51a72f0faa2d9cd524a0c11b4ca368350f988458/vex3/index.html" width=1050 height=600></iframe><br><br><br>
+        </div>
+
+    </body>
+
+</html>

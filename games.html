@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Netcade - Games</title>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="styles.css">
+        <link id="favicon" rel="icon" href="">
+
+    </head>
+
+    <body>
+
+        <!-- TOP NAVBAR AND SETTINGS -->
+        <div id="nav" style="background-color: #080808;">
+            <h1 style="color: white; font-size: 50px; text-align: center; margin-bottom: -20px;"><a href="index.html">Netcade</a></h1>
+            <ul style="list-style-type: none; text-align: center; position: relative; left: -19px;">
+                <li class="navitem" style="background-color: #000000;"><a href="games.html">Games</a></li>
+                <li class="navitem"><a href="tools.html">Tools</a></li>
+                <li class="navitem"><a href="bookmarklets.html">Bookmarklets</a></li>
+                <li class="navitem"><a href="https://www.github.com/wintrcat">GitHub</a></li>
+            </ul>
+
+            <a href="javascript:settingsMenu();"><img src="assets/settings.png" width=28 height=28 style="position: absolute; right: 14px; top: 20px; filter: invert(100%);"></a>
+        </div>
+
+        <div class="settings" style="visibility: hidden; list-style-type: none; position: absolute; right: 14px; top: 55px; height: 100px; width: 225px; background-color: #161616; border: 2px solid rgb(32, 32, 32);">
+
+            <span style="display: block;">Tab Cloak</span>
+            <input id="titlecloak" type="text" placeholder="Tab Title..." style="border: 2px solid black;"> 
+            <button onclick="cloakTitle();">Apply</button><br>
+
+            <table style="border: 2px solid black; background-color: #2d2d2d; width: 109px; position: relative; top: 10px;">
+                <tr>
+                    <td>
+                        <a href="javascript:cloakIcon(1);"><img src="assets/googleicon.ico" width=24 height=24 style="position: relative; top: -19px; left: -30px;"></a>
+                    </td>
+                    <td>
+                        <a href="javascript:cloakIcon(2);"><img src="assets/googledriveicon.png" width=24 height=24 style="position: relative; top: -19px; left: -30px;"></a>
+                    </td>
+                    <td>
+                        <a href="javascript:cloakIcon(3);"><img src="assets/googleclassroomicon.png" width=27.852 height=24 style="position: relative; top: -19px; left: -30px;"></a>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+        <button class="panicbtn" onclick="panic();"><span style="color: white; position: relative; bottom: 1px;">Panic</span></button>
+
+        <!-- OTHER -->
+
+        <div style="text-align: center;">
+            <h1 style="font-size: 30px;">Game Library</h1>
+        </div>
+
+        <!-- Search Box -->
+        <div style="text-align: center; margin-bottom: -10px;">
+            <input id="gamesearchbox" type="text" placeholder="Search..." onkeypress="if (window.event.keyCode == 13) searchForGame();">
+            <button style="height: 33px; width: 33px; background-color: #161616;" onclick="searchForGame();"><span>🔍</span></button><br>
+            <span style="font-size: 12px; visibility: hidden;"><i id="gamesearchresultscounter">Results: 0</i></span>
+        </div>
+
+        <!-- Game Database -->
+        <div id="gamedatabase" style="position: relative; top: 30px; text-align: center;">
+
+            <a href="gamepages/game_vex3.html" id="gameentry_vex 3">
+                <div class="gameentry">
+                    <img style="width: 150px; height: 150px;" src="assets/games/vex3.jpeg"><br>
+                    <span style="font-size: 25px; position: relative; bottom: 5px;">Vex 3</span>   
+                </div>
+            </a>
+
+            <a href="gamepages/game_vex4.html" id="gameentry_vex 4">
+                <div class="gameentry">
+                    <img style="width: 150px; height: 150px;" src="assets/games/vex4.jpeg"><br>
+                    <span style="font-size: 25px; position: relative; bottom: 5px;">Vex 4</span>  
+                </div>
+            </a>
+
+            <a href="gamepages/game_vex5.html" id="gameentry_vex 5">
+                <div class="gameentry">
+                    <img style="width: 150px; height: 150px;" src="assets/games/vex5.jpeg"><br>
+                    <span style="font-size: 25px; position: relative; bottom: 5px;">Vex 5</span>  
+                </div>
+            </a>
+
+            <a href="gamepages/game_slope.html" id="gameentry_slope">
+                <div class="gameentry">
+                    <img style="width: 150px; height: 150px;" src="assets/games/slope.png"><br>
+                    <span style="font-size: 25px; position: relative; bottom: 5px;">Slope</span>  
+                </div>
+            </a>
+
+            <a href="gamepages/game_madalincarsmultiplayer.html" id="gameentry_madalin cars multiplayer">
+                <div class="gameentry" style="position: relative; bottom: 10px;">
+                    <img style="width: 150px; height: 150px;" src="assets/games/madalin-cars-multiplayer.jpg"><br>
+                    <span style="font-size: 13px; position: relative; bottom: 0px;">Madalin Cars Multiplayer</span>  
+                </div>
+            </a>
+
+            <a href="gamepages/game_krunker.html" id="gameentry_krunker">
+                <div class="gameentry" style="position: relative; bottom: 0px;">
+                    <img style="width: 150px; height: 150px;" src="assets/games/krunker.jpg"><br>
+                    <span style="font-size: 25px; position: relative; bottom: 5px;">Krunker</span>  
+                </div>
+            </a>
+
+            <a href="gamepages/game_shellshockers.html" id="gameentry_shell shockers">
+                <div class="gameentry" style="position: relative; bottom: 4px;">
+                    <img style="width: 150px; height: 150px;" src="assets/games/shellshockers.webp"><br>
+                    <span style="font-size: 22px; position: relative; bottom: 1px;">Shell Shockers</span>  
+                </div>
+            </a>
+
+            <a href="gamepages/game_rooftopsnipers.html" id="gameentry_rooftop snipers">
+                <div class="gameentry" style="position: relative; bottom: 10px;">
+                    <img style="width: 150px; height: 150px;" src="assets/games/rooftopsnipers.jpeg"><br>
+                    <span style="font-size: 20px; position: relative; bottom: 1px;">Rooftop Snipers</span>  
+                </div>
+            </a>
+
+            <a href="gamepages/game_minecraftclassic.html" id="gameentry_minecraft classic">
+                <div class="gameentry" style="position: relative; bottom: 11px;">
+                    <img style="width: 150px; height: 150px;" src="assets/games/minecraftclassic.png"><br>
+                    <span style="font-size: 19px; position: relative; bottom: 1px;">Minecraft Classic</span>  
+                </div>
+            </a>
+
+            <a href="gamepages/game_motox3m.html" id="gameentry_moto x3m">
+                <div class="gameentry" style="position: relative; bottom: 4px;">
+                    <img style="width: 150px; height: 150px;" src="assets/games/motox3m.jpeg"><br>
+                    <span style="font-size: 25px; position: relative; bottom: 5px;">Moto X3M</span>  
+                </div>
+            </a>
+
+            <a href="gamepages/game_motox3mwinter.html" id="gameentry_moto x3m winter">
+                <div class="gameentry" style="position: relative; bottom: 12px;">
+                    <img style="width: 150px; height: 150px;" src="assets/games/motox3mwinter.jpg"><br>
+                    <span style="font-size: 18px; position: relative; bottom: -1px;">Moto X3M Winter</span>  
+                </div>
+            </a>
+
+            <a href="gamepages/game_motox3mpoolparty.html" id="gameentry_moto x3m pool party">
+                <div class="gameentry" style="position: relative; bottom: 14px;">
+                    <img style="width: 150px; height: 150px;" src="assets/games/motox3mpoolparty.jpg"><br>
+                    <span style="font-size: 15px; position: relative; bottom: -1px;">Moto X3M Pool Party</span>  
+                </div>
+            </a>
+
+            <a href="gamepages/game_motox3mspookyland.html" id="gameentry_moto x3m spooky land">
+                <div class="gameentry" style="position: relative; bottom: 14px;">
+                    <img style="width: 150px; height: 150px;" src="assets/games/motox3mspookyland.jpeg"><br>
+                    <span style="font-size: 14px; position: relative; bottom: -1px;">Moto X3M Spooky Land</span>  
+                </div>
+            </a>
+
+            <a href="gamepages/game_sortthecourt.html" id="gameentry_sort the court">
+                <div class="gameentry" style="position: relative; bottom: 9px;">
+                    <img style="width: 150px; height: 150px;" src="assets/games/sortthecourt.webp"><br>
+                    <span style="font-size: 21px; position: relative; bottom: 1px;">Sort The Court</span>  
+                </div>
+            </a>
+
+            <a href="gamepages/game_strandedisle.html" id="gameentry_stranded isle">
+                <div class="gameentry" style="position: relative; bottom: 9px;">
+                    <img style="width: 150px; height: 150px;" src="assets/games/strandedisle.webp"><br>
+                    <span style="font-size: 21px; position: relative; bottom: 1px;">Stranded Isle</span>  
+                </div>
+            </a>
+
+            <a href="gamepages/game_soccerrandom.html" id="gameentry_soccer random">
+                <div class="gameentry" style="position: relative; bottom: 9px;">
+                    <img style="width: 150px; height: 150px;" src="assets/games/soccerrandom.webp"><br>
+                    <span style="font-size: 21px; position: relative; bottom: 1px;">Soccer Random</span>  
+                </div>
+            </a>
+
+            <a href="gamepages/game_basketrandom.html" id="gameentry_basket random">
+                <div class="gameentry" style="position: relative; bottom: 9px;">
+                    <img style="width: 150px; height: 150px;" src="assets/games/basketrandom.webp"><br>
+                    <span style="font-size: 21px; position: relative; bottom: 1px;">Basket Random</span>  
+                </div>
+            </a>
+
+            <a href="gamepages/game_fridaynightfunkin.html" id="gameentry_friday night funkin">
+                <div class="gameentry" style="position: relative; bottom: 14px;">
+                    <img style="width: 150px; height: 150px;" src="assets/games/fridaynightfunkin.webp"><br>
+                    <span style="font-size: 16px; position: relative; bottom: -2px;">Friday Night Funkin</span>  
+                </div>
+            </a>
+
+            <a href="gamepages/game_penaltykickonline.html" id="gameentry_penalty kick online">
+                <div class="gameentry" style="position: relative; bottom: 14px;">
+                    <img style="width: 150px; height: 150px;" src="assets/games/penaltykickonline.png"><br>
+                    <span style="font-size: 16px; position: relative; bottom: -2px;">Penalty Kick Online</span>  
+                </div>
+            </a>
+
+            <a href="gamepages/game_soccerskillseurocup2021.html" id="gameentry_soccer skills euro cup 2021">
+                <div class="gameentry" style="position: relative; bottom: 14px;">
+                    <img style="width: 150px; height: 150px;" src="assets/games/soccerskillseurocup2021.jpeg"><br>
+                    <span style="font-size: 12px; position: relative; bottom: 1px;">Soccer Skills Euro Cup 2021</span>  
+                </div>
+            </a>
+
+            <a href="gamepages/game_zombsio.html" id="gameentry_zombs.io">
+                <div class="gameentry" style="position: relative; bottom: 4px;">
+                    <img style="width: 150px; height: 150px;" src="assets/games/zombsio.jpg"><br>
+                    <span style="font-size: 25px; position: relative; bottom: 5px;">Zombs.io</span>  
+                </div>
+            </a>
+
+            <a href="gamepages/game_holeio.html" id="gameentry_hole.io">
+                <div class="gameentry" style="position: relative; bottom: 4px;">
+                    <img style="width: 150px; height: 150px;" src="assets/games/holeio.jpeg"><br>
+                    <span style="font-size: 25px; position: relative; bottom: 5px;">Hole.io</span>  
+                </div>
+            </a>
+
+            <a href="gamepages/game_cavegameio.html" id="gameentry_cavegame.io">
+                <div class="gameentry" style="position: relative; bottom: 6px;">
+                    <img style="width: 150px; height: 150px;" src="assets/games/cavegameio.webp"><br>
+                    <span style="font-size: 23px; position: relative; bottom: 5px;">Cavegame.io</span>  
+                </div>
+            </a>
+
+            <a href="gamepages/game_deflyio.html" id="gameentry_defly.io">
+                <div class="gameentry" style="position: relative; bottom: 4px;">
+                    <img style="width: 150px; height: 150px;" src="assets/games/deflyio.jfif"><br>
+                    <span style="font-size: 25px; position: relative; bottom: 5px;">Defly.io</span>  
+                </div>
+            </a>
+
+            <a href="gamepages/game_findthecandy.html" id="gameentry_find the candy">
+                <div class="gameentry" style="position: relative; bottom: 9px;">
+                    <img style="width: 150px; height: 150px;" src="assets/games/findthecandy.jpeg"><br>
+                    <span style="font-size: 21px; position: relative; bottom: 1px;">Find The Candy</span>  
+                </div>
+            </a>
+
+            <a href="gamepages/game_dunesurfer.html" id="gameentry_dune surfer">
+                <div class="gameentry" style="position: relative; bottom: 6px;">
+                    <img style="width: 150px; height: 150px;" src="assets/games/dunesurfer.jpeg"><br>
+                    <span style="font-size: 23px; position: relative; bottom: 5px;">Dune Surfer</span>  
+                </div>
+            </a>
+
+            <a href="gamepages/game_bartendertherightmix.html" id="gameentry_bartender the right mix">
+                <div class="gameentry" style="position: relative; bottom: 14px;">
+                    <img style="width: 150px; height: 150px;" src="assets/games/bartendertherightmix.webp"><br>
+                    <span style="font-size: 13px; position: relative;">Bartender The Right Mix</span>  
+                </div>
+            </a>
+
+            <a href="gamepages/game_minimetro.html" id="gameentry_mini metro">
+                <div class="gameentry" style="position: relative; bottom: 4px;">
+                    <img style="width: 150px; height: 150px;" src="assets/games/minimetro.png"><br>
+                    <span style="font-size: 25px; position: relative; bottom: 5px;">Mini Metro</span>  
+                </div>
+            </a>
+
+            <a href="gamepages/game_thequestforthegoldenwheel.html" id="gameentry_the quest for the golden wheel">
+                <div class="gameentry" style="position: relative; bottom: 4px;">
+                    <img style="width: 150px; height: 150px;" src="assets/games/thequestforthegoldenwheel.gif"><br>
+                    <span style="font-size: 10px; position: relative; bottom: 1px;">The Quest for the Golden Wheel</span>  
+                </div>
+            </a>
+
+            <br><br><br>
+
+        </div>
+
+    </body>
+
+</html>
